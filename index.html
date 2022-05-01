@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <h1>SPLI<br/>TTER</h1>
+
+    <main class="container">
+      <section class="tip-entry">
+        <h2>Bill</h2>
+        <input type="number" class="input dollar-icon">
+        <h2>Select Tip %</h2>
+        <div class="btns">
+          <button type="button" class="button tips">5%</button>
+          <button type="button" class="button tips">10%</button>
+          <button type="button" class="button tips btn-grey">15%</button>
+          <button type="button" class="button tips">25%</button>
+          <button type="button" class="button tips">50%</button>
+          <button type="button" class="button tips custom">Custom</button>
+        </div>
+        <h2>Number of People</h2>
+        <input type="number" class="input person-icon">
+      </section>
+      <section class="tip-amount">
+        <div>
+          <div class="grid-item">Tip Amount</div>
+          <p>/ person</p>
+        </div>
+        <div class="tip-per-person flex">$0.00</div>
+        <div>
+          <div class="grid-item">Total</div>
+          <p>/ person</p>
+        </div>
+        <div class="total-per-person flex">$0.00</div>
+        <button type='button' class="button reset btn-grey">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>
