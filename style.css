@@ -32,12 +32,13 @@
 
 body{
     font-family: var(--ff-text);
-    /* background-color: red; */
+    
     display: flex;
     flex-direction: column;
-    /* justify-content:center ; */
+   
     align-items: center;
     background-color: var(--Lightgrayish-cyan);
+    
     
     
     
@@ -77,8 +78,6 @@ input{
   border: none;
   background-repeat: no-repeat;
   background-position: 5% 50%;
-  
- 
   margin-bottom: 3em;
   
 }
@@ -88,6 +87,7 @@ input{
 }
 .person-icon {
   background-image: url(images/icon-person.svg);  
+  
 }
 
 .btns {
@@ -125,18 +125,16 @@ input{
   color:var(--Darkgrayish-cyan)
 }
 
-div > br {
-  color:red;
-}
+
 
 .tip-amount{
   
   background-color: var(--Verydark-cyan);
-  /* text-align: center; */
-  padding:2em;
+  
+  padding:4em;
   border-radius:1em;
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-columns: 1fr 1fr;
   gap:2em;
   justify-content: flex-end;
   align-items: center;
@@ -160,10 +158,10 @@ div > br {
 
 .total-per-person,
 .tip-per-person{
-  margin-right: auto;
+  margin-left: auto;
  color:var(--Strong-cyan);
 width: 65%;
-font-size: 3em;
+font-size: 2.5em;
 
 
 
@@ -180,11 +178,37 @@ p {
   color:var(--VeryLightgrayish-cyan);
 }
 
+input[type="text"] {
+  display:block;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 58%;
+  font-family: var(--ff-text);
+  color: var(--Verydark-cyan);
+  font-size: 2em;
+
+
+}
+
+input[type="number"] {
+  display:block;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 80%;
+  font-family: var(--ff-text);
+  color: var(--Verydark-cyan);
+  font-size: 2em;
+}
+
+
+
+
+
+
+
 @media only screen and (min-width: 856px) {  
 
   .container{
     width:80%;
-    /* max-width: 90rem; */
+    max-width: 90rem;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -212,10 +236,6 @@ p {
 margin-left: auto;
 }
 
-/* .grid-item,
-p{
-  text-align: center;
-} */
 
 
 }
