@@ -1,51 +1,275 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
 :root {
   /* primary color */
-  --Strong-cyan:hsl(172, 67%, 45%); /*Primary Text*/
+  --Strong-cyan: hsl(172, 67%, 45%); /*Primary Text*/
   --Soft-red: hsl(14, 88%, 65%); /*Primary active text*/
-
-
 
   /* Neutral */
 
   --Verydark-cyan: hsl(183, 100%, 15%);
   --Darkgrayish-cyan: hsl(186, 14%, 43%);
-  --Grayish-cyan:hsl(184, 14%, 56%);
-  --Lightgrayish-cyan:hsl(185, 41%, 84%);
-  --VeryLightgrayish-cyan:hsl(189, 41%, 97%);
-
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Lightgrayish-cyan: hsl(185, 41%, 84%);
+  --VeryLightgrayish-cyan: hsl(189, 41%, 97%);
 
   /* font family */
-  --ff-text:'Space Mono', monospace;
+  --ff-text: "Space Mono", monospace;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: var(--ff-text);
 
-body{
-    font-family: var(--ff-text);
-    
-    display: flex;
-    flex-direction: column;
-   
-    align-items: center;
-    background-color: var(--Lightgrayish-cyan);
-    
-    
-    
-    
+  display: flex;
+  flex-direction: column;
 
+  align-items: center;
+  background-color: var(--Lightgrayish-cyan);
+}
+
+header {
+  margin-top: 4em;
+  color: var(--Darkgrayish-cyan);
 }
 
 h1{
+  letter-spacing: 0.5em;
+  font-size: 3em;
+}
+.container {
+  width: 90%;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.48em;
+  background-color: #fff;
+  /* text-align: center; */
+  border-radius: 1em;
+  margin-top: 3em;
+  padding:1em;
+}
+
+
+
+
+.tips,
+.bill,
+.output,
+.num_of_people{
+  width: 100%;
+  padding: 1em;
+ 
+  
+}
+
+h2{
+  color:var(--Darkgrayish-cyan);
+  margin-bottom: 1em;
+}
+
+input{
+  width:100%;
+  padding: 0.5em;
+  background-color: var(--VeryLightgrayish-cyan);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 3%; 
+  border: none;
+  outline: none;
+}
+
+.dollar_icon_image{
+  background-image: url(images/icon-dollar.svg); 
+
+}
+
+.person_icon_image{
+  background-image: url(images/icon-person.svg); 
+}
+
+input[type="number"] {
+ 
+  text-align: right;
+  font-family: var(--ff-text);
+  color: var(--Verydark-cyan);
+  font-size: 2em;
+}
+
+.tips_percent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:0.5em
+  
+}
+
+.btn,
+.custom{
+  width:30%;
+  font-family: var(--ff-text);
+  
+
+}
+
+
+.btn {
+  font-weight: 400;
+  font-size: 1.5em;
+  background-color: var(--Verydark-cyan);
+  color:#fff;
+  border-radius: 0.3em;
+  border:none;
+  cursor:pointer;
+  padding: 1em;
+}
+
+
+
+.custom {
+  /* position: absolute; */
+  /* z-index: -1; */
+  text-align: center;
+  font-family: var(--ff-text);
+  border-radius: 0.3em;
+  font-size: 1.5em;
+  border: none;
+  /* padding: 1em; */
+  overflow-x: hidden;
+  padding-bottom: 1em;
+  
+}
+.btn:focus {
+  background-color:var(--Strong-cyan);
+  color:var(--Verydark-cyan);
+  
+  
+  
+}
+
+.output{
+
+  background-color: var(--Verydark-cyan);
+  margin-top: 2em;
+  
+ 
+  border-radius:1em;
+  
+ 
+}
+
+.output_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  
+ 
+}
+
+.total-per-person,
+.tip-per-person{
+ color:var(--Strong-cyan);
+font-size: 2.5em;
+
+
+
+}
+
+.grid-item {
+  font-size: 1em;
+  color:var(--VeryLightgrayish-cyan);
+}
+
+p {
+  font-size: 13px;
+  color:var(--Lightgrayish-cyan);
+  
+}
+
+.output_flex > div {
+  margin-bottom: 2em;
+}
+
+.reset {
+  text-transform: uppercase;
+  color:var(--Verydark-cyan);
+  background-color: var(--Grayish-cyan);
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  
+}
+
+
+.hidden{
+  
+  border:1px solid var(--Strong-cyan);
+  
+}
+
+.hidden2{
+  border: 1px solid var(--Soft-red);
+}
+
+
+.error-message {
+  display: flex;
+  flex-direction: row-reverse;
+  color: var(--Soft-red);
+  font-size: 1.2em;
+  opacity: 0;
+  
+}
+
+
+@media only screen and (min-width: 756px) {  
+
+ .container {
+   width: 90%;
+   max-width: 90rem;
+  display: flex;
+  gap:2em
+ }
+
+ .output{
+   width: 50%;
+   padding: 3em;
+ }
+
+ .reset{
+   margin-top: 9em;
+ }
+
+ .grid-item{
+   font-size: 1em;
+ }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* h1{
   margin-top: 2em;
 }
 
@@ -84,9 +308,11 @@ input{
 
 .dollar-icon{
   background-image: url(images/icon-dollar.svg); 
+  background-size: 4%;
 }
 .person-icon {
-  background-image: url(images/icon-person.svg);  
+  background-image: url(images/icon-person.svg); 
+  background-size: 4%; 
   
 }
 
@@ -99,8 +325,15 @@ input{
   
 
 }
-.button{
-  width:48.5%;
+
+.custom {
+
+  display: block;
+  padding-left: 20px;
+}
+.button,
+.custom{
+  width:35%;
   margin-bottom: 1em;
   padding: 0.5em;
   font-family: var(--ff-text);
@@ -113,6 +346,10 @@ input{
   cursor:pointer;
 }
 
+.custom:active{
+  color:var(--Verydark-cyan)
+}
+
 .btn-grey {
   background-color:var(--Strong-cyan);
   color:var(--Verydark-cyan);
@@ -121,8 +358,11 @@ input{
   
 }
 .custom{
+  
   background-color: var(--VeryLightgrayish-cyan);
-  color:var(--Darkgrayish-cyan)
+  color:var(--Darkgrayish-cyan);
+  /* padding-left: 5%; */
+/*   
 }
 
 
@@ -167,16 +407,9 @@ font-size: 2.5em;
 
 }
 
-p {
-  font-size: 13px;
-  color:var(--Lightgrayish-cyan);
-  
-}
 
-.grid-item {
-  font-size: 1em;
-  color:var(--VeryLightgrayish-cyan);
-}
+
+
 
 input[type="text"] {
   display:block;
@@ -185,13 +418,16 @@ input[type="text"] {
   font-family: var(--ff-text);
   color: var(--Verydark-cyan);
   font-size: 2em;
+  /* border:1px solid #fff; */
 
+/* input[type="text"]:hover {
+  /* border-color:var(--Strong-cyan) */
 
-}
+/* 
 
 input[type="number"] {
   display:block;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 10px 10px 10px 80%;
   font-family: var(--ff-text);
   color: var(--Verydark-cyan);
@@ -234,8 +470,4 @@ input[type="number"] {
   .total-per-person,
 .tip-per-person{
 margin-left: auto;
-}
-
-
-
-}
+} */

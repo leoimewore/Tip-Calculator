@@ -11,37 +11,56 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
+    <header>
     <h1>SPLI<br/>TTER</h1>
+    </header>
 
     <main class="container">
-      <section class="tip-entry">
-        <h2>Bill</h2>
-        <input type="number" class="input dollar-icon">
-        <h2>Select Tip %</h2>
-        <div class="btns">
-          <button type="button" class="button tips">5%</button>
-          <button type="button" class="button tips">10%</button>
-          <button type="button" class="button tips btn-grey">15%</button>
-          <button type="button" class="button tips">25%</button>
-          <button type="button" class="button tips">50%</button>
-          <button type="button" class="button tips custom">Custom</button>
-        </div>
-        <h2>Number of People</h2>
-        <input type="number" class="input person-icon">
-      </section>
-      <section class="tip-amount">
+      
         <div>
-          <div class="grid-item">Tip Amount</div>
-          <p>/ person</p>
+          <section class="bill">
+            <h2>Bill</h2>
+            <div class="error-message">Can't be zero</div>
+            <input type="number" placeholder="0" class="dollar_icon_image bill_input">
+          </section>
+          <section class="tips">
+            <h2>Select Tip %</h2>
+            <div class="tips_percent">
+              <button type="button" class="btn btn-tips">5%</button>
+              <button type="button" class="btn btn-tips">10%</button>
+              <button type="button" class="btn btn-tips">15%</button>
+              <button type="button" class="btn btn-tips">25%</button>
+              <button type="button" class="btn btn-tips">50%</button>
+              <input  placeholder="Custom" class="custom">
+            </div>
+          </section>
+            <section class="num_of_people">
+            <h2>Number of People</h2>
+            <div class="error-message">Can't be zero</div>
+            <input type="number" placeholder="0" class="person_icon_image person_count">
+          </section>
         </div>
-        <div class="tip-per-person flex">$0.00</div>
-        <div>
-          <div class="grid-item">Total</div>
-          <p>/ person</p>
+      
+      <section class="output">
+        <div class="output_flex">
+          <div>
+            <div class="grid-item">Tip Amount</div>
+            <p>/ person</p>
+          </div>
+          <div class="tip-per-person">$0.00</div>
         </div>
-        <div class="total-per-person flex">$0.00</div>
-        <button type='button' class="button reset btn-grey">Reset</button>
+        <div class="output_flex">
+          <div>
+            <div class="grid-item">Total</div>
+            <p>/ person</p>
+          </div>
+          <div class="total-per-person">$0.00</div>
+        </div>
+        
+        <button type='button' class="btn reset">Reset</button>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
