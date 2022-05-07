@@ -3,6 +3,8 @@
 This was the TIP CALCULATOR APP. 
 My Goal was provide to continue to improve in my JavaScript skills while I keep brushing up on my HTML and CSS 👋
 
+This simple web application collects the total bill and provides the amount each diner will pay in tips and total amount
+
 
 Methodology
 
